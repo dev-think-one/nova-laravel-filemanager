@@ -1,0 +1,29 @@
+{
+    "name": "yaroslawww/nova-laravel-filemanager",
+    "description": "Simple package adds the ability to select an image from UniSharp/laravel-filemanager",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ThinkOne\\NovaLaravelFilemanager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ThinkOne\\NovaLaravelFilemanager\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
