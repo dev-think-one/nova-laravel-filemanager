@@ -25,6 +25,17 @@ composer require unisharp/laravel-filemanager
 composer require yaroslawww/nova-laravel-filemanager
 ```
 
+## Routes
+
+```injectablephp
+Route::group([
+    'prefix'     => config('lfm.filemanager_path'),
+    'middleware' => [ 'web', 'auth' ],
+], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+```
+
 ## Credits
 
 - [![Think Studio](https://yaroslawww.github.io/images/sponsors/packages/logo-think-studio.png)](https://think.studio/)
