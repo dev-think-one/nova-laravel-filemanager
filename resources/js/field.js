@@ -1,5 +1,9 @@
-Nova.booting((Vue, router, store) => {
-  Vue.component('index-nlfm-image', require('./components/IndexField'))
-  Vue.component('detail-nlfm-image', require('./components/DetailField'))
-  Vue.component('form-nlfm-image', require('./components/FormField'))
+import IndexField from './components/IndexField'
+import DetailField from './components/DetailField'
+import FormField from './components/FormField'
+
+Nova.booting((app, store) => {
+  app.component('index-nlfm-image', IndexField)
+  app.component('detail-nlfm-image', DetailField)
+  app.component('form-nlfm-image', FormField)
 })
