@@ -11,12 +11,12 @@ Simple package adds the ability to select an image from [UniSharp/laravel-filema
 
 | Nova | Package |
 |------|---------|
-| V1   | V1      |
+| V1-3 | V1      |
 | V4   | V2      |
 
-## Usage
+## Usage Field
 
-```injectablephp
+```php
 NLFMImage::make( 'Image', 'image' );
 NLFMImage::make( 'Image', 'image' )
     ->filemanagerPath('/custom-link/files');
@@ -26,6 +26,28 @@ You can specify filemanagerPath in the main laravel-filemanager config file by a
 ```
 'filemanager_path' => '/custom-link/files'
 ```
+
+![filemanager-1.png](docs/images/filemanager-1.png)
+![filemanager-2.png](docs/images/filemanager-2.png)
+![filemanager-3.png](docs/images/filemanager-3.png)
+![filemanager-4.png](docs/images/filemanager-4.png)
+
+## Usage Tool
+
+```php
+ \ThinkOne\NovaLaravelFilemanager\NLFileManager::make(),
+ // or
+ \ThinkOne\NovaLaravelFilemanager\NLFileManager::make()
+                ->lfmUrl(url(config('lfm.filemanager_path')))
+                ->onlyImages()
+                ->onlyFiles()
+                ->title('Browse files')
+                ->icon('document-search')
+                ->hideMenu(),
+```
+
+![filemanager-tool-1.png](docs/images/filemanager-tool-1.png)
+![filemanager-tool-2.png](docs/images/filemanager-tool-2.png)
 
 ## Installation
 
