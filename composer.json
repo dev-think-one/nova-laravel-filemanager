@@ -1,23 +1,24 @@
 {
-    "name": "yaroslawww/nova-laravel-filemanager",
+    "name": "think.studio/nova-laravel-filemanager",
     "description": "Simple package adds the ability to select an image from UniSharp/laravel-filemanager",
     "keywords": [
         "laravel",
         "nova"
     ],
+    "homepage": "https://github.com/dev-think-one/nova-laravel-filemanager",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaroslav Georgitsa",
+            "email": "yg@think.studio",
+            "homepage": "https://github.com/yaroslawww",
+            "role": "Developer"
+        }
+    ],
     "repositories": [
         {
             "type": "composer",
             "url": "https://nova.laravel.com"
-        }
-    ],
-    "authors": [
-        {
-            "name": "Yaroslav Georgitsa",
-            "email": "yaroslav.georgitsa@gmail.com",
-            "homepage": "https://github.com/yaroslawww",
-            "role": "Developer"
         }
     ],
     "require": {

@@ -9,4 +9,4 @@ mix
     .vue({ version: 3 })
     .sass('resources/sass/field.scss', 'css')
     .sass('resources/sass/tool.scss', 'css')
-    .nova('yaroslawww/nova-laravel-filemanager')
+    .nova('think.studio/nova-laravel-filemanager')
