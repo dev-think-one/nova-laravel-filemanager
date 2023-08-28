@@ -54,11 +54,10 @@ You can specify filemanagerPath in the main laravel-filemanager config file by a
 You can install the package via composer:
 
 ```bash
-composer require unisharp/laravel-filemanager
-# please check guide https://unisharp.github.io/laravel-filemanager/installation
-
 composer require yaroslawww/nova-laravel-filemanager
 ```
+
+Please check guide https://unisharp.github.io/laravel-filemanager/installation
 
 ## Routes
 

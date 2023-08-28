@@ -3,15 +3,29 @@
 namespace ThinkOne\NovaLaravelFilemanager\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Artisan;
+use Laravel\Nova\NovaCoreServiceProvider;
+use ThinkOne\NovaLaravelFilemanager\Tests\Fixtures\NovaServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     use RefreshDatabase;
 
-    protected function getPackageProviders($app)
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        Artisan::call('nova:publish');
+    }
+
+
+    protected function getPackageProviders($app): array
     {
         return [
-            \ThinkOne\NovaLaravelFilemanager\FieldServiceProvider::class,
+            \Inertia\ServiceProvider::class,
+            NovaCoreServiceProvider::class,
+            NovaServiceProvider::class,
+            \ThinkOne\NovaLaravelFilemanager\ServiceProvider::class,
         ];
     }
 
@@ -32,6 +46,6 @@ class TestCase extends \Orchestra\Testbench\TestCase
             'prefix'   => '',
         ]);
 
-        // $app['config']->set('nova-seo-entity.some_key', 'some_value');
+        // $app['config']->set('nova-laravel-filemanager.some_key', 'some_value');
     }
 }
